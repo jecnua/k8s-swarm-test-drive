@@ -1,14 +1,16 @@
 #!/bin/bash
 # http://kubernetes.io/docs/getting-started-guides/aws/
 
+ID=`uuidgen | cut -d '-' -f 1`
+
 export KUBERNETES_PROVIDER=aws
 export KUBE_AWS_ZONE=eu-central-1a
 export NUM_NODES=2
 export MASTER_SIZE=m4.large
 export NODE_SIZE=m4.large
 export AWS_S3_REGION=eu-central-1
-export AWS_S3_BUCKET=kubernetes-artifacts-test
-export INSTANCE_PREFIX=k8s
+export AWS_S3_BUCKET=$ID-kubernetes-artifacts-test
+export INSTANCE_PREFIX=$ID-k8s
 
 # On https://github.com/kubernetes/kubernetes/blob/release-1.2/cluster/aws/util.sh
 export KUBERNETES_SKIP_DOWNLOAD=true
