@@ -1,0 +1,14 @@
+Swarm notes
+
+.link https://docs.docker.com/swarm/install-w-machine/ docker-machine
+
+    $ docker-machine ls
+    NAME       ACTIVE   DRIVER      STATE     URL   SWARM   DOCKER    ERRORS
+    swarm-01   -        amazonec2   Stopped                 Unknown
+
+Remove it:
+
+    $ docker-machine rm swarm-01
+    About to remove swarm-01
+    Are you sure? (y/n): y
+    Successfully removed swarm-01
