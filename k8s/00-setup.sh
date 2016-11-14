@@ -25,7 +25,7 @@ fi
 
 # New on the file on github
 # https://raw.githubusercontent.com/kubernetes/kubernetes/master/cluster/get-kube.sh
-export KUBERNETES_RELEASE='v1.3.0-beta.2'
+export KUBERNETES_RELEASE='v1.3.0'
 # Not present here
 # curl -sS https://get.k8s.io | bash
 
