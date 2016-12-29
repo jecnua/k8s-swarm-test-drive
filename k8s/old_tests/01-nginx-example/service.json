@@ -1,0 +1,20 @@
+{
+    "kind": "Service",
+    "apiVersion": "v1",
+    "metadata": {
+        "name": "nginx-ext"
+    },
+    "spec": {
+        "type": "NodePort",
+        "selector": {
+            "name": "nginx-label"
+        },
+        "ports": [
+            {
+                "protocol": "TCP",
+                "port": 80,
+                "targetPort": 80
+            }
+        ]
+    }
+}

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: mygrafana-ext
+  # namespace: kube-system
+  # labels:
+  #   kubernetes.io/cluster-service: "true"
+  #   kubernetes.io/name: "Grafana"
+spec:
+  # On production clusters, consider setting up auth for grafana, and
+  # exposing Grafana either using a LoadBalancer or a public IP.
+  type: NodePort
+  ports:
+    - port: 3000
+      targetPort: 3000
+      nodePort: 3000
+  selector:
+    fab: grafana
