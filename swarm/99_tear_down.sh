@@ -1,5 +1,5 @@
 #!/bin/bash
 
-SERVER_NAME='swarm-01'
-
-docker-machine kill $SERVER_NAME
+docker-machine kill 'swarm-01'
+docker-machine kill 'swarm-02'
+docker-machine kill 'swarm-03'
