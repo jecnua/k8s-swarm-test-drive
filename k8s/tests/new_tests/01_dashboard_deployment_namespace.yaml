@@ -1,0 +1,41 @@
+kind: Deployment
+apiVersion: extensions/v1beta1
+metadata:
+  name: kubernetes-dashboard-test
+  labels:
+    k8s-addon: kubernetes-dashboard.addons.k8s.io
+    k8s-app: kubernetes-dashboard
+    version: v1.4.0
+    kubernetes.io/cluster-service: "true"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      k8s-app: kubernetes-dashboard-test
+  template:
+    metadata:
+      labels:
+        k8s-addon: kubernetes-dashboard.addons.k8s.io
+        k8s-app: kubernetes-dashboard-test
+        version: v1.4.0
+        kubernetes.io/cluster-service: "true"
+    spec:
+      containers:
+      - name: kubernetes-dashboard
+        image: gcr.io/google_containers/kubernetes-dashboard-amd64:v1.4.0
+        resources:
+          # keep request = limit to keep this container in guaranteed class
+          limits:
+            cpu: 100m
+            memory: 50Mi
+          requests:
+            cpu: 100m
+            memory: 50Mi
+        ports:
+        - containerPort: 9090
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 9090
+          initialDelaySeconds: 30
+          timeoutSeconds: 30
