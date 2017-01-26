@@ -11,6 +11,6 @@ spec:
     spec:
       containers:
       - name: wdhw
-        image: dockercloud/hello-world:1.7.9
+        image: dockercloud/hello-world:latest
         ports:
         - containerPort: 80
