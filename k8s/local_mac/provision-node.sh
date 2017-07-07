@@ -9,4 +9,7 @@ EOF
 apt-get update
 apt-get install -y docker.io
 apt-get install -y kubelet kubeadm kubectl kubernetes-cni
-kubeadm join --token c1c911.eca99879cdf5d0af 10.0.2.15:6443
+
+# https://github.com/kubernetes/kubernetes/issues/44750
+iptables -F
+kubeadm join --token c1c911.eca99879cdf5d0af 172.42.42.10:6443

@@ -1,4 +1,6 @@
-#
+# Create a small k8s cluster on vagrant
+
+## New
 
 root@k8s:/home/ubuntu# kubeadm init --token c1c911.eca99879cdf5d0af --kubernetes-version stable-1.7
 [kubeadm] WARNING: kubeadm is in beta, please do not use it for production clusters.
