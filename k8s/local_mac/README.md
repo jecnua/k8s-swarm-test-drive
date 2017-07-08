@@ -2,6 +2,9 @@
 
 ## New
 
+
+## 1.7
+
 root@k8s:/home/ubuntu# kubeadm init --token c1c911.eca99879cdf5d0af --kubernetes-version stable-1.7
 [kubeadm] WARNING: kubeadm is in beta, please do not use it for production clusters.
 [init] Using Kubernetes version: v1.7.0
@@ -24,7 +27,9 @@ root@k8s:/home/ubuntu# kubeadm init --token c1c911.eca99879cdf5d0af --kubernetes
 
 
 
-
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+
+https://github.com/kumulustech/vagrant-kubeadm/blob/master/kubeadm-master-ubuntu.sh
