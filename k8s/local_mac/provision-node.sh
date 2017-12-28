@@ -1,12 +1,21 @@
 #!/bin/bash
 
 sudo su
+
 apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
+
+export DEBIAN_FRONTEND="noninteractive"
+
 apt-get update
+apt-get upgrade --assume-yes
+apt-get autoremove --assume-yes
+apt-get clean
+locale-gen en_GB.UTF-8 # Will fix the warning when logging to the box
+
 apt-get install -y docker.io apt-transport-https awscli jq curl nfs-common
 apt-get install -y kubelet=1.9.0-00 kubeadm=1.9.0-00 kubectl=1.9.0-00 kubernetes-cni=0.6.0-00
 # Hold these packages back so that we don't accidentally upgrade them.
