@@ -7,9 +7,16 @@ cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
 deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 apt-get update
-apt-get install -y docker.io
-apt-get install -y kubelet kubeadm kubectl kubernetes-cni
+apt-get install -y docker.io apt-transport-https awscli jq curl nfs-common
+apt-get install -y kubelet=1.9.0-00 kubeadm=1.9.0-00 kubectl=1.9.0-00 kubernetes-cni=0.6.0-00
+# Hold these packages back so that we don't accidentally upgrade them.
+apt-mark hold kubelet=1.9.0-00 kubeadm=1.9.0-00 kubectl=1.9.0-00 kubernetes-cni=0.6.0-00
 
 # https://github.com/kubernetes/kubernetes/issues/44750
 iptables -F
-kubeadm join --token c1c911.eca99879cdf5d0af 172.42.42.10:6443
+
+# New in 1.9: discovery-token-unsafe-skip-ca-verification
+kubeadm join \
+  --token c1c911.eca99879cdf5d0af \
+  --discovery-token-unsafe-skip-ca-verification \
+  172.42.42.10:6443
