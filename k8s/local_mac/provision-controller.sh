@@ -34,14 +34,6 @@ kubeadm init \
   --token c1c911.eca99879cdf5d0af $FLAGS \
   --kubernetes-version v$VERSION \
   --apiserver-advertise-address=172.42.42.10
-# kubectl label --overwrite no $HOSTNAME kubeadm.alpha.kubernetes.io/role=master
-# New way
-# kubectl label --overwrite no $HOSTNAME node-role.kubernetes.io/master=true
-
-# kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel-rbac.yml
-# kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
-# kubectl cordon $HOSTNAME
 
 cd /home/$USER_OVERRIDE || exit
 mkdir -p /home/$USER_OVERRIDE/.kube
@@ -62,3 +54,10 @@ chmod 777 kube-flannel.yml
 
 # kubectl apply -f kube-flannel.yml
 su $USER_OVERRIDE -c "kubectl apply -f kube-flannel.yml"
+
+# kubectl label --overwrite no $HOSTNAME kubeadm.alpha.kubernetes.io/role=master
+# New way
+# kubectl label --overwrite no $HOSTNAME node-role.kubernetes.io/master=true
+# kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel-rbac.yml
+# kubectl create -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+# kubectl cordon $HOSTNAME

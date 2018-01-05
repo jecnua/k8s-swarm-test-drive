@@ -32,11 +32,8 @@ root@k8s:/home/ubuntu# kubeadm init --token c1c911.eca99879cdf5d0af --kubernetes
 [apiclient] Created API client, waiting for the control plane to become ready
 
 
-
-
 mkdir -p $HOME/.kube
 sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
 sudo chown $(id -u):$(id -g) $HOME/.kube/config
-
 
 https://github.com/kumulustech/vagrant-kubeadm/blob/master/kubeadm-master-ubuntu.sh
