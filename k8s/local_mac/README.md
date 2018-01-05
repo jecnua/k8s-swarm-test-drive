@@ -1,7 +1,14 @@
 # Create a small k8s cluster on vagrant
 
+Now on 1.9.1
+
+Just run:
+
+    create.sh
+
 ## New
 
+    vagrant up  18.62s user 17.06s system 6% cpu 9:38.13 total
 
 ## 1.7
 

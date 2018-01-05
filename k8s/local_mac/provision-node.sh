@@ -2,6 +2,8 @@
 
 sudo su
 
+VERSION='1.9.1'
+
 apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
 cat <<EOF > /etc/apt/sources.list.d/kubernetes.list
@@ -17,9 +19,9 @@ apt-get clean
 locale-gen en_GB.UTF-8 # Will fix the warning when logging to the box
 
 apt-get install -y docker.io apt-transport-https awscli jq curl nfs-common
-apt-get install -y kubelet=1.9.0-00 kubeadm=1.9.0-00 kubectl=1.9.0-00 kubernetes-cni=0.6.0-00
+apt-get install -y kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00 kubernetes-cni=0.6.0-00
 # Hold these packages back so that we don't accidentally upgrade them.
-apt-mark hold kubelet=1.9.0-00 kubeadm=1.9.0-00 kubectl=1.9.0-00 kubernetes-cni=0.6.0-00
+apt-mark hold kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00 kubernetes-cni=0.6.0-00
 
 # https://github.com/kubernetes/kubernetes/issues/44750
 iptables -F
