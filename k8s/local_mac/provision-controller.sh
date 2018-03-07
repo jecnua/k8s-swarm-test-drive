@@ -30,6 +30,7 @@ apt-mark hold kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00 kubern
 # https://github.com/kubernetes/kubernetes/issues/44750
 iptables -F
 # You need to specify the address or it will use the internal one
+# https://github.com/kubernetes/kubeadm/issues/629
 kubeadm init \
   --token c1c911.eca99879cdf5d0af $FLAGS \
   --kubernetes-version v$VERSION \
