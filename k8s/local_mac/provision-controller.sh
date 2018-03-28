@@ -6,6 +6,7 @@ HOSTNAME=$(hostname)
 # Or:
 # This work without skip preflight checks
 VERSION='1.10.0'
+CIDR='10.244.0.0/16'
 
 sudo su
 
@@ -31,14 +32,12 @@ apt-mark hold kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00 kubern
 iptables -F
 # You need to specify the address or it will use the internal one
 # https://github.com/kubernetes/kubeadm/issues/629
+# -pod-network-cidr needed by flannel
 kubeadm init \
   --token c1c911.eca99879cdf5d0af "$FLAGS" \
   --kubernetes-version v"$VERSION" \
   --apiserver-advertise-address=172.42.42.10 \
-  --pod-network-cidr=10.244.0.0/16
-
-# -pod-network-cidr needed by flannel
-
+  --pod-network-cidr="$CIDR"
 
 cd /home/$USER_OVERRIDE || exit
 mkdir -p /home/$USER_OVERRIDE/.kube
