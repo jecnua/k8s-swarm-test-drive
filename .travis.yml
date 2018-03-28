@@ -1,0 +1,38 @@
+---
+sudo: false
+language: ruby
+
+# cache:
+#   bundler: true
+
+services:
+- docker
+
+addons:
+  apt:
+    sources:
+    - debian-sid    # Grab ShellCheck from the Debian repo
+    packages:
+    - shellcheck
+
+install:
+- bundle install
+
+gemfile:
+- Gemfile
+
+rvm:
+  - 2.3.1
+
+script:
+  - rubocop k8s/local_mac/Vagrantfile
+  - shellcheck k8s/local_mac/*.sh
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    on_success: change # default: change
+    on_failure: always # default: always

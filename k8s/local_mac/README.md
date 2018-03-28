@@ -1,7 +1,8 @@
 # Create a small k8s cluster on vagrant
 
-![](https://img.shields.io/badge/k8s-v1.10.0-blue.svg?style=flat)
-![](https://img.shields.io/badge/cni-flannel-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.10.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/virtualbox-v5.2-blue.svg?style=flat)
+![](https://img.shields.io/badge/cni-flannel-green.svg?style=flat)
 
 To spin the two nodes up use:
 
