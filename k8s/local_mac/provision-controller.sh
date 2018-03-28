@@ -34,7 +34,11 @@ iptables -F
 kubeadm init \
   --token c1c911.eca99879cdf5d0af $FLAGS \
   --kubernetes-version v$VERSION \
-  --apiserver-advertise-address=172.42.42.10
+  --apiserver-advertise-address=172.42.42.10 \
+  --pod-network-cidr=10.244.0.0/16
+
+# -pod-network-cidr needed by flannel
+
 
 cd /home/$USER_OVERRIDE || exit
 mkdir -p /home/$USER_OVERRIDE/.kube
