@@ -5,7 +5,7 @@ HOSTNAME=`hostname`
 # FLAGS='--skip-preflight-checks'
 # Or:
 # This work without skip preflight checks
-VERSION='1.9.3'
+VERSION='1.10.0'
 
 sudo su
 
