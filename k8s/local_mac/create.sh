@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vagrant up --parallel
+vagrant up

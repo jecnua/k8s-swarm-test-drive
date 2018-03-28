@@ -1,6 +1,7 @@
 # Create a small k8s cluster on vagrant
 
 ![](https://img.shields.io/badge/k8s-v1.10.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/cni-flannel-blue.svg?style=flat)
 
 To spin the two nodes up use:
 
@@ -16,6 +17,8 @@ To spin the two nodes up use:
     vagrant up  18.62s user 17.06s system 6% cpu 9:38.13 total
 
 ## Versions
+
+### 1.10.0
 
 ### 1.9.3
 
