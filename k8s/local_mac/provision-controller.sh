@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_OVERRIDE='ubuntu'
-HOSTNAME=`hostname`
+HOSTNAME=$(hostname)
 # FLAGS='--skip-preflight-checks'
 # Or:
 # This work without skip preflight checks
@@ -32,8 +32,8 @@ iptables -F
 # You need to specify the address or it will use the internal one
 # https://github.com/kubernetes/kubeadm/issues/629
 kubeadm init \
-  --token c1c911.eca99879cdf5d0af $FLAGS \
-  --kubernetes-version v$VERSION \
+  --token c1c911.eca99879cdf5d0af "$FLAGS" \
+  --kubernetes-version v"$VERSION" \
   --apiserver-advertise-address=172.42.42.10 \
   --pod-network-cidr=10.244.0.0/16
 

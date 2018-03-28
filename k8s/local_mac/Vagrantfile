@@ -2,34 +2,36 @@
 # # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.define 'k8s-controller' do |s|
-    s.ssh.forward_agent = true
-    s.vm.box = 'ubuntu/xenial64'
-    s.vm.hostname = 'k8s-controller'
-    s.vm.provision :shell, path: 'provision-controller.sh'
-    s.vm.network 'private_network',
-                 ip: '172.42.42.10',
-                 netmask: '255.255.255.0',
-                 auto_config: true,
-                 virtualbox__intnet: 'k8s-net'
-    s.vm.provider 'virtualbox' do |v|
+  config.vm.define 'k8s-controller' do |controller|
+    controller.ssh.forward_agent = true
+    controller.vm.box = 'ubuntu/xenial64'
+    controller.vm.hostname = 'k8s-controller'
+    controller.vm.provision :shell, path: 'provision-controller.sh'
+    controller.vm.provision :shell, path: 'provision-go.sh'
+    controller.vm.provision :shell, path: 'provision-kubectl.sh'
+    controller.vm.network 'private_network',
+                          ip: '172.42.42.10',
+                          netmask: '255.255.255.0',
+                          auto_config: true,
+                          virtualbox__intnet: 'k8s-net'
+    controller.vm.provider 'virtualbox' do |v|
       v.name = 'k8s'
       v.memory = 2048
       v.gui = false
     end
   end
 
-  config.vm.define 'k8s-node' do |s|
-    s.ssh.forward_agent = true
-    s.vm.box = 'ubuntu/xenial64'
-    s.vm.hostname = 'k8s-node'
-    s.vm.provision :shell, path: 'provision-node.sh'
-    s.vm.network 'private_network',
-                 ip: '172.42.42.11',
-                 netmask: '255.255.255.0',
-                 auto_config: true,
-                 virtualbox__intnet: 'k8s-net'
-    s.vm.provider 'virtualbox' do |v|
+  config.vm.define 'k8s-node' do |node|
+    node.ssh.forward_agent = true
+    node.vm.box = 'ubuntu/xenial64'
+    node.vm.hostname = 'k8s-node'
+    node.vm.provision :shell, path: 'provision-node.sh'
+    node.vm.network 'private_network',
+                    ip: '172.42.42.11',
+                    netmask: '255.255.255.0',
+                    auto_config: true,
+                    virtualbox__intnet: 'k8s-net'
+    node.vm.provider 'virtualbox' do |v|
       v.name = 'k8s-node'
       v.memory = 2048
       v.gui = false
