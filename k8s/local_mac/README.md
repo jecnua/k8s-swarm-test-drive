@@ -5,9 +5,17 @@
 ![](https://img.shields.io/badge/virtualbox-v5.2-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 
-To spin the two nodes up use:
+Controller ![](https://img.shields.io/badge/go-v1.10-blue.svg?style=flat)
+
+## Run
+
+Create with:
 
     ./create.sh
+
+Destroy with:
+
+    ./destroy.sh
 
 ## Login
 

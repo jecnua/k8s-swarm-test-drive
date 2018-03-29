@@ -18,9 +18,9 @@ EOF
 export DEBIAN_FRONTEND="noninteractive"
 
 apt-get update
-apt-get upgrade --assume-yes
-apt-get autoremove --assume-yes
-apt-get clean
+# apt-get upgrade --assume-yes
+# apt-get autoremove --assume-yes
+# apt-get clean
 locale-gen en_GB.UTF-8 # Will fix the warning when logging to the box
 
 apt-get install -y docker.io apt-transport-https awscli jq curl nfs-common
