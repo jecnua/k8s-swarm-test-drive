@@ -1,3 +1,3 @@
 #!/bin/bash
 
-vagrant up
+time vagrant up

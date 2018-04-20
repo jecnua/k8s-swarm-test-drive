@@ -1,11 +1,11 @@
 # Create a small k8s cluster on vagrant
 
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.10.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.10.1-blue.svg?style=flat)
 ![](https://img.shields.io/badge/virtualbox-v5.2-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 
-Controller ![](https://img.shields.io/badge/go-v1.10-blue.svg?style=flat)
+Controller ![](https://img.shields.io/badge/go-v1.10.1-blue.svg?style=flat)
 
 ## Run
 
@@ -28,7 +28,7 @@ Destroy with:
 
 ## Versions
 
-### 1.10.0
+### 1.10.x
 
 ### 1.9.0
 
