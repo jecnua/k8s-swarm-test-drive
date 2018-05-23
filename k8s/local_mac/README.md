@@ -1,21 +1,26 @@
 # Create a small k8s cluster on vagrant
 
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.10.1-blue.svg?style=flat)
-![](https://img.shields.io/badge/virtualbox-v5.2-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.10.3-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 
-Controller ![](https://img.shields.io/badge/go-v1.10.1-blue.svg?style=flat)
+Controller ![](https://img.shields.io/badge/go-v1.10.3-blue.svg?style=flat)
+
+## Requirements
+
+- Vagrant
+- Virtualbox
+- Optional: Make, rubocop, shellcheck
 
 ## Run
 
-Create with:
+Spin it up with:
 
-    ./create.sh
+    make up
 
-Destroy with:
+Stop/Destroy with:
 
-    ./destroy.sh
+    make down
 
 ## Login
 
@@ -85,3 +90,9 @@ And:
     sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 - https://github.com/kumulustech/vagrant-kubeadm/blob/master/kubeadm-master-ubuntu.sh
+
+## Tested on
+
+- MacOSx
+- Virtualbox 5.12
+- Vagrant 2.1.1
