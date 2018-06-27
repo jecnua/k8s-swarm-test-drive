@@ -2,7 +2,7 @@
 
 sudo su
 
-VERSION='1.10.4'
+VERSION='1.10.5'
 
 apt-get update && apt-get install -y apt-transport-https curl
 curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
