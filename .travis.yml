@@ -16,8 +16,8 @@ rvm:
   - 2.5.0
 
 script:
-  - rubocop k8s/local_mac/Vagrantfile
-  - shellcheck k8s/local_mac/*.sh
+  - rubocop k8s/local_vagrant/Vagrantfile
+  - shellcheck k8s/local_vagrant/*.sh
 
 branches:
   only:
