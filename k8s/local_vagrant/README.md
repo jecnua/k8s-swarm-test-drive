@@ -93,6 +93,6 @@ And:
 
 ## Tested on
 
-- MacOSx
+- MacOSx/Linux
 - Virtualbox 5.12
 - Vagrant 2.1.1
