@@ -1,7 +1,7 @@
 # Create a small k8s cluster on vagrant
 
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.10.3-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.12.1-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 
 Controller ![](https://img.shields.io/badge/go-v1.10.3-blue.svg?style=flat)
