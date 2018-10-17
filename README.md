@@ -9,4 +9,7 @@ Only real up to date dir:
 
 ## Compatibility
 
-Tested on OS X El Captain.
+Tested on:
+
+- OSX ElCaptain
+- Ubuntu 18.04
