@@ -1,4 +1,11 @@
-# k8s on AWS
+# k8s on AWS - UNMAINTAINED
+
+![](https://img.shields.io/maintenance/yes/2016.svg)
+![http://unmaintained.tech/](http://unmaintained.tech/badge.svg)
+
+NOTE: This directory is not maintained. To run K8S on AWS use my other repo:
+
+- [https://github.com/jecnua/terraform-aws-kubernetes](https://github.com/jecnua/terraform-aws-kubernetes)
 
 ## Prerequisites
 
