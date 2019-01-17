@@ -5,11 +5,11 @@
 
 Only real up to date dir:
 
-- https://github.com/jecnua/k8s-swarm-test-drive/tree/master/k8s/local_mac
+-   <https://github.com/jecnua/k8s-swarm-test-drive/tree/master/k8s/local_vagrant>
 
 ## Compatibility
 
 Tested on:
 
-- OSX ElCaptain
-- Ubuntu 18.04
+-   OSX ElCaptain
+-   Ubuntu 18.04
