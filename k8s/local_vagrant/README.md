@@ -2,9 +2,12 @@
 
 ![](https://img.shields.io/maintenance/yes/2019.svg)
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.13.2-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.13.3-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
-![](https://img.shields.io/badge/go-v1.10.3-blue.svg?style=flat)
+![](https://img.shields.io/badge/go-v1.11-blue.svg?style=flat)
+
+This module will create two VMs in Virtualbox (via Vagrant) and install k8s
+on them creating a fully functional k8s cluster.
 
 ## Requirements
 
@@ -24,10 +27,12 @@ Stop/Destroy with:
 
 ## Login
 
-    vagrant ssh k8s-controller
+    vagrant ssh k8s-controller # controller node
     vagrant ssh k8s-node
 
 ## How much time does it takes
+
+Highly dependent on your internet connection speed.
 
     vagrant up  18.62s user 17.06s system 6% cpu 9:38.13 total
 
