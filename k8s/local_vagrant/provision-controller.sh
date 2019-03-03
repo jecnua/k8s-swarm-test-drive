@@ -5,7 +5,7 @@ HOSTNAME=$(hostname)
 # FLAGS='--skip-preflight-checks'
 # Or:
 # This work without skip preflight checks
-VERSION='1.13.3'
+VERSION='1.13.4'
 CIDR='10.244.0.0/16'
 
 sudo su
@@ -27,6 +27,8 @@ apt-get install -y docker.io apt-transport-https awscli jq curl nfs-common
 apt-get install -y kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00
 # Hold these packages back so that we don't accidentally upgrade them.
 apt-mark hold kubelet=$VERSION-00 kubeadm=$VERSION-00 kubectl=$VERSION-00
+
+systemctl enable docker.service
 
 # https://github.com/kubernetes/kubernetes/issues/44750
 iptables -F

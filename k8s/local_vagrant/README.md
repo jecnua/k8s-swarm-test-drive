@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/maintenance/yes/2019.svg)
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.13.3-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.13.4-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 ![](https://img.shields.io/badge/go-v1.11-blue.svg?style=flat)
 
@@ -11,9 +11,13 @@ on them creating a fully functional k8s cluster.
 
 ## Requirements
 
+Applications:
+
 - Vagrant
 - Virtualbox
 - Optional: Make, rubocop, shellcheck
+
+2GB of memory to host both controller and node.
 
 ## Run
 
