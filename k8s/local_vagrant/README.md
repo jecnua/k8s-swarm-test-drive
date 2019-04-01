@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/maintenance/yes/2019.svg)
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.13.4-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.14.0-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 ![](https://img.shields.io/badge/go-v1.11-blue.svg?style=flat)
 
@@ -49,4 +49,4 @@ Highly dependent on your internet connection speed.
 - Vagrant 2.2.4
 
 In the past I used to run this repo on Mac but this is no longer the case so
-I can't guarantee it works anymore :)
+I can't guarantee it works any more :)

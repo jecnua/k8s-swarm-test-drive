@@ -5,7 +5,7 @@ HOSTNAME=$(hostname)
 # FLAGS='--skip-preflight-checks'
 # Or:
 # This work without skip preflight checks
-VERSION='1.13.4'
+VERSION='1.14.0'
 CIDR='10.244.0.0/16'
 
 sudo su
@@ -16,7 +16,7 @@ deb http://apt.kubernetes.io/ kubernetes-xenial main
 EOF
 
 export DEBIAN_FRONTEND="noninteractive"
-
+ # ALL LOWERCASE
 apt-get update
 # apt-get upgrade --assume-yes
 # apt-get autoremove --assume-yes
@@ -36,9 +36,9 @@ iptables -F
 # https://github.com/kubernetes/kubeadm/issues/629
 # -pod-network-cidr needed by flannel
 kubeadm init \
-  --token c1c911.eca99879cdf5d0af "$FLAGS" \
+  --token "c1c911.eca99879cdf5d0af" \
   --kubernetes-version v"$VERSION" \
-  --apiserver-advertise-address=172.42.42.10 \
+  --apiserver-advertise-address="172.42.42.10" \
   --pod-network-cidr="$CIDR"
 
 cd /home/$USER_OVERRIDE || exit
