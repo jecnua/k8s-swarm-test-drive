@@ -2,7 +2,7 @@
 
 ![](https://img.shields.io/maintenance/yes/2019.svg)
 [![Build Status](https://travis-ci.org/jecnua/k8s-swarm-test-drive.svg?branch=master)](https://travis-ci.org/jecnua/k8s-swarm-test-drive)
-![](https://img.shields.io/badge/kubernetes-v1.14.0-blue.svg?style=flat)
+![](https://img.shields.io/badge/kubernetes-v1.14.1-blue.svg?style=flat)
 ![](https://img.shields.io/badge/cni-flannel-orange.svg?style=flat)
 ![](https://img.shields.io/badge/go-v1.11-blue.svg?style=flat)
 
