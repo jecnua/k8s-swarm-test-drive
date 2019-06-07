@@ -5,7 +5,7 @@ HOSTNAME=$(hostname)
 # FLAGS='--skip-preflight-checks'
 # Or:
 # This work without skip preflight checks
-VERSION='1.14.1'
+VERSION='1.14.3'
 CIDR='10.244.0.0/16'
 
 sudo su
