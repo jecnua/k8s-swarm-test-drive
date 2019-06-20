@@ -9,7 +9,7 @@ down:
 	@echo Boxes destroyed
 
 update:
-	vagrant box update
+	# vagrant box update
 	@echo Boxe update
 
 test:
