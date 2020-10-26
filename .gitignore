@@ -3,3 +3,4 @@ k8s/*.tar.gz
 k8s/*.txt
 **.DS_Store
 *.log
+.idea
